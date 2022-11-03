@@ -35,9 +35,19 @@ Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false
 
+import * as directives from '@/directives'
+
+Object.keys(directives).forEach(item=>{
+  Vue.directive(item,directives[item])
+})
+
+
+
 new Vue({
   el: '#app',
   router,
   store,
   render: h => h(App)
 })
+
+

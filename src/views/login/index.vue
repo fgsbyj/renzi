@@ -135,7 +135,7 @@ export default {
             // await  this.$store.dispatch('user/userlogin',this.loginForm)
             await this["user/userlogin"](this.loginForm);
             this.$router.push("/");
-          } catch (error) {
+          } catch (error) { 
             console.log(error);
           } finally {
             this.loading = false;

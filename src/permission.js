@@ -16,6 +16,7 @@ router.beforeEach(function(to, from, next) {
       next('/') // 跳到主页
     } else {
       next() // 直接放行
+      store.dispatch('user/getUserInfo')
     }
   } else {
     // 如果没有token
